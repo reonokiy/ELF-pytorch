@@ -24,3 +24,16 @@ torchvision = {url = "https://download.pytorch.org/whl/cu129/torchvision-0.26.0%
 einops = ">=0.7.0"
 huggingface-hub = ">=0.23.0"
 transformers = ">=4.41.2"
+
+[feature.convert.pypi-dependencies]
+jax = {version = "==0.4.38", extras = ["cpu"]}
+jaxlib = "==0.4.38"
+flax = "==0.10.2"
+orbax-checkpoint = "==0.5.23"
+optax = ">=0.2.5"
+absl-py = ">=1.4.0"
+ml-dtypes = ">=0.4.0"
+gcsfs = ">=2024.1.0"
+
+[environments]
+convert = {features = ["convert"], solve-group = "convert"}
