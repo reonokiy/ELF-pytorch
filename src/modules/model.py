@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from modules_pt.layers import (
+from modules.layers import (
     Attention, BottleneckTextProj, FinalLayer, RMSNorm, SwiGLUFFN,
     TextRotaryEmbeddingFast, TimestepEmbedder,
 )

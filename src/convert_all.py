@@ -26,6 +26,11 @@ if not os.path.exists(JAX_SRC):
     )
 
 # ── import JAX modules first (before our src shadows 'modules') ───────────────
+# Python adds the script's directory (src/) to sys.path[0] automatically;
+# remove it so our PT modules don't shadow the JAX ones during import.
+for _p in [OUR_SRC, "", "."]:
+    while _p in sys.path:
+        sys.path.remove(_p)
 sys.path.insert(0, os.path.join(JAX_SRC, "src"))
 
 import jax
