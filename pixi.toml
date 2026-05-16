@@ -1,0 +1,41 @@
+[workspace]
+authors = ["reonokiy <reonokiy@nokiy.net>"]
+channels = ["conda-forge"]
+name = "ELF"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = ">=3.10"
+setuptools = "==69.5.1"
+numpy = ">=1.26.4,<2.0.0"
+scipy = ">=1.12.0"
+matplotlib = ">=3.8.0"
+requests = ">=2.31.0"
+tqdm = ">=4.66.0"
+pillow = ">=9.5.0"
+pyyaml = ">=6.0.1"
+
+[pypi-dependencies]
+jax = {version = "==0.4.38", extras = ["tpu"]}
+libtpu-nightly = {url = "https://storage.googleapis.com/libtpu-nightly-releases/wheels/libtpu-nightly/libtpu_nightly-0.1.dev20241010+nightly.cleanup-py3-none-any.whl"}
+libtpu = {url = "https://storage.googleapis.com/libtpu-lts-releases/wheels/libtpu/libtpu-0.0.7-py3-none-linux_x86_64.whl"}
+jaxlib = "==0.4.38"
+flax = "==0.10.2"
+orbax-checkpoint = "==0.5.23"
+optax = ">=0.2.5"
+absl-py = ">=1.4.0"
+ml-dtypes = ">=0.4.0"
+gcsfs = ">=2024.1.0"
+datasets = ">=2.19.0"
+huggingface-hub = ">=0.23.0"
+transformers = ">=4.41.2,<4.45.0"
+torch = {url = "https://download.pytorch.org/whl/cu129/torch-2.11.0%2Bcu129-cp312-cp312-manylinux_2_28_x86_64.whl"}
+torchvision = {url = "https://download.pytorch.org/whl/cu129/torchvision-0.26.0%2Bcu129-cp312-cp312-manylinux_2_28_x86_64.whl"}
+wandb = "==0.16.6"
+tensorflow = ">=2.15.0"
+einops = ">=0.7.0"
+sacrebleu = ">=2.4.0"
+rouge-score = ">=0.1.2"

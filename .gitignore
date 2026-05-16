@@ -1,0 +1,12 @@
+# pixi environments
+.pixi/*
+!.pixi/config.toml
+
+# model checkpoints
+*.pt
+*.pth
+*.ckpt
+
+# Python cache
+__pycache__/
+*.pyc
